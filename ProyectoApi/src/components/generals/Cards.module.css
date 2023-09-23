@@ -1,0 +1,25 @@
+.Cards{
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.CardsImg{
+    border-radius: 10px;
+    background-color: azure;
+}
+
+@keyframes AnimacionImg{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+
+.CardsImg:hover{
+    animation-name: AnimacionImg;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
