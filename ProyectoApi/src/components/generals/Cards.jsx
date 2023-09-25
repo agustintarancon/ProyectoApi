@@ -6,10 +6,8 @@ const Cards = ({Nombre,Img, id}) => {
 
   return (
     <li className={style.Cards}>
-      <Link to={`/details/${id}`}>
         <img className={style.CardsImg} width={179} height={250}src={Img} alt={Nombre} />
         <div>{Nombre}</div>
-      </Link>
     </li>
   );
 };

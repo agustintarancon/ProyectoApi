@@ -12,7 +12,7 @@ function SpecificShow() {
 
     const fetchData = async () => {
       try {
-        const  { data }  = await axios.get(`https://www.episodate.com/api/show-details?q=${id}`); // El id debe ser ingresado por useParams (react router dom)
+        const  { data }  = await axios.get(`https://www.episodate.com/api/show-details?q=20560`); // El id debe ser ingresado por useParams (react router dom)
         setShowData(data.tvShow);
       } catch (error) {
         console.error("Error en la solicitud HTTP:", error);
