@@ -8,6 +8,8 @@ const TvPrograms = () => {
     const [ShowsData,setShowsData]=useState([]);
     const UrlBase="https://www.episodate.com/api/most-popular";
 
+    console.log(ShowsData)
+
     useEffect(()=>{
         const fetchShowData = async() => {
             try{
@@ -21,8 +23,6 @@ const TvPrograms = () => {
         fetchShowData();  
     },[]);
 
-    console.log(ShowsData);
-
   return (
     <div>
         <ul className={style.CardsGrid}>
@@ -31,6 +31,7 @@ const TvPrograms = () => {
                 key={listado.id}
                 Nombre={listado.name}
                 Img={listado.image_thumbnail_path}
+                id={listado.id }
               />)}
         </ul>
     </div>

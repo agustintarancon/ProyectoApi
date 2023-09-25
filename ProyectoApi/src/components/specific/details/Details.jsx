@@ -23,7 +23,7 @@ const Details = ({ShowData}) => {
                 <p>start  date: {start_date}</p>
                 <p>status: {status}</p>
                 <p>total episodes: {episodes?.length}</p>
-                <button className='btn btn-primary'><i class="bi bi-play-fill"></i>Play</button>
+                <button className='btn btn-primary'><i className="bi bi-play-fill"></i>Play</button>
             </div>
         </div>
 
