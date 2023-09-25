@@ -9,13 +9,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar>
+      <Navbar/>
         <Routes>
           <Route path="/" Component={HomePage} />
-          <Route path="/details" Component={SpecificShow} />
+          <Route path="/details/:id" Component={SpecificShow} />
           <Route path="*" Component={Error} />
         </Routes>
-        </Navbar>
+        
       </BrowserRouter>
     </>
   );

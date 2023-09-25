@@ -31,6 +31,7 @@ const TvPrograms = () => {
                 key={listado.id}
                 Nombre={listado.name}
                 Img={listado.image_thumbnail_path}
+                id={listado.id}
               />)}
         </ul>
     </div>
