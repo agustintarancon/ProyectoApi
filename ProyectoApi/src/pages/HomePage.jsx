@@ -15,6 +15,7 @@ const TvPrograms = () => {
   const [pagination, setPagination] = useState("");
   const[info, setInfo] = useState({});
 
+
   useEffect(()=>{
       const fetchShowData = async() => {
           try{
@@ -23,7 +24,7 @@ const TvPrograms = () => {
               setInfo(data.pages);
           }
           catch(error){
-              console.log("Hubo un error:",error);
+            console.log("Hubo un error:",error);
           }
       }
       fetchShowData();  
@@ -33,7 +34,7 @@ const TvPrograms = () => {
 
   return (
    <>
-    <div className='d-flex justify-content-center'>
+    <div className='d-flex justify-content-center pt-5 pb-5'>
       <Search 
         setSearch= {setSearch}
         setPagination={setPagination}
@@ -41,7 +42,10 @@ const TvPrograms = () => {
       
     </div>
     <div>
-
+      {
+        info === 0 ? (
+          <div className='d-flex justify-content-center'><h1 className='error'>No hay resultados</h1></div>
+        ): 
       <ul className={style.CardsGrid}>
         {ShowsData.map((listado) =>
           <Cards
@@ -51,17 +55,20 @@ const TvPrograms = () => {
             id={listado.id}
           />)}
       </ul>
-
-      <div className='d-flex justify-content-center '>
+      }
+      <div className='d-flex justify-content-center pb-4'>
         <Pagination
           pageCount={info}
           setPagination={setPagination}
         />
       </div>
-
     </div>
     </>
   );
 };
 
 export default TvPrograms;
+
+
+
+
