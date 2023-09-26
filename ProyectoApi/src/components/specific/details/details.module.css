@@ -1,0 +1,4 @@
+.scrollable {
+  max-height: 300px; /* Altura máxima de la lista antes de que aparezca la barra de desplazamiento */
+  overflow-y: scroll; /* Habilita la barra de desplazamiento vertical */
+}
