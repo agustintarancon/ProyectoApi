@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
 
-const Pagination = ({pageCount,setUrlApi}) => {
-    const newUrlApi="https://www.episodate.com/api/most-popular?page=";
+const Pagination = ({pageCount, setPagination}) => {
 
     const handleClick= (event)=>{
-        setUrlApi(`${newUrlApi}${event.selected+1}`);
+      setPagination(`&page=${event.selected+1}`);
     };
     
   return (

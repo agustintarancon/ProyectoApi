@@ -17,7 +17,7 @@ const Details = ({ShowData}) => {
             <div className='col-12 col-md-6 col-lg-6 col-xl-8'>
                 <h1>{name}</h1>
                 <p>{description}</p>
-                <ul className='d-flex list-unstyled'>{
+                <ul className='d-flex flex-wrap list-unstyled'>{
                   genres?.map((genre, index) => (
                   <li className='pe-3 text-primary' key={index}>{genre}</li>
                   ))}
@@ -26,7 +26,7 @@ const Details = ({ShowData}) => {
                 <p>start  date: {start_date}</p>
                 <p>status: {status}</p>
                 <p>total episodes: {episodes?.length}</p>
-                <button className='btn btn-primary'><i className="bi bi-play-fill"></i>Play</button>
+                <Link to="/*"><button className='btn btn-primary'><i className="bi bi-play-fill"></i>Play</button></Link>
             </div>
         </div>
 
@@ -35,14 +35,11 @@ const Details = ({ShowData}) => {
             <div key={season}>
               <h2>Temporada {season}</h2>
               <ul>
-                {episodes
-                  .filter(episode => episode.season === season)
-                  .map((episode,index) => (
-                    <Link to="./Error404/Error">
-                      <li className="px-2" key={index} >{index+1}- {episode.name}</li>
+                {episodes.filter(episode => episode.season === season).map((episode,index) => (
+                    <Link to="/*" key={index}>
+                      <li className="px-2">{index+1}- {episode.name}</li>
                     </Link>
-                    ))}
-                  
+                    ))} 
               </ul>
             </div>
           ))}
@@ -52,5 +49,3 @@ const Details = ({ShowData}) => {
 };
 
 export default Details;
-
-{/* <li key={index} >{episode.name}</li> */}
