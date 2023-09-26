@@ -29,12 +29,14 @@ const TvPrograms = () => {
 
   return (
     <div>
+
       <ul className={style.CardsGrid}>
         {ShowsData.map((listado) =>
           <Cards
             key={listado.id}
             Nombre={listado.name}
             Img={listado.image_thumbnail_path}
+            id={listado.id}
           />)}
       </ul>
       <div className='d-flex justify-content-center '>
@@ -43,6 +45,7 @@ const TvPrograms = () => {
         setUrlApi={setUrlApi}
       />
       </div>
+
     </div>
   );
 };
