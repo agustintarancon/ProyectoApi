@@ -14,6 +14,7 @@ function App() {
           <Route path="/" Component={HomePage} />
           <Route path="/details/:id" Component={SpecificShow} />
           <Route path="*" Component={Error} />
+
         </Routes>
         
       </BrowserRouter>
