@@ -30,8 +30,6 @@ const TvPrograms = () => {
       fetchShowData();  
   },[search, pagination]);
 
-  console.log(info)
-
   return (
    <>
     <div className='d-flex justify-content-center pt-5 pb-5'>

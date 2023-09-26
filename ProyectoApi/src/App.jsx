@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import SpecificShow from "./pages/SpecificShow";
 import Error from "./pages/Error"
 import Navbar from "./components/generals/navBar/Navbar";
-import Footer from './components/footer/Footer';
+import Footer from './components/generals/footer/Footer';
 
 function App() {
   return (
