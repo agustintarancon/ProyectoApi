@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import SpecificShow from "./pages/SpecificShow";
 import Error from "./pages/Error"
 import Navbar from "./components/generals/navBar/Navbar";
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/details/:id" Component={SpecificShow} />
           <Route path="/*" Component={Error} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
