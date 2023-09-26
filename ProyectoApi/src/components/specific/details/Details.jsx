@@ -30,7 +30,7 @@ const Details = ({ShowData}) => {
             </div>
         </div>
 
-        <div className='d-flex flex-wrap'>
+        <div className='d-flex flex-wrap pt-5 pb-5'>
           {seasons.map(season => (
             <div key={season}>
               <h2>Temporada {season}</h2>
