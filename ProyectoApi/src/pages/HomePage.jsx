@@ -5,9 +5,28 @@ import Cards from '../components/generals/Cards';
 import style from './HomePage.module.css'
 import Pagination from '../components/generals/Pagination';
 
-const UrlBase = "https://www.episodate.com/api/most-popular";
+const UrlBase2 = "https://www.episodate.com/api/most-popular"; //no
+const UrlBase="https://www.episodate.com/api/search?q=";
 
-
+const TvPrograms = () => {
+  
+    const [ShowsData,setShowsData]=useState([]);
+    const [search , setSearch]= useState ('');
+  
+    useEffect(()=>{
+        const fetchShowData = async() => {
+            try{
+                const  {data} = await axios.get(`${UrlBase}${search}`);
+                setShowsData(data.tv_shows);             
+            }
+            catch(error){
+                console.log("Hubo un error:",error);
+            }
+        }
+        fetchShowData();  
+    },[search]);
+    
+ /*  
 const TvPrograms = () => {
 
   const [ShowsData, setShowsData] = useState([]);
@@ -29,8 +48,13 @@ const TvPrograms = () => {
     }
     fetchShowData();
   }, [urlApi]);
+*/
 
   return (
+   <>
+    <div>
+      <Search setSearch= {setSearch}/>
+    </div>
     <div>
 
       <ul className={style.CardsGrid}>
@@ -50,6 +74,7 @@ const TvPrograms = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

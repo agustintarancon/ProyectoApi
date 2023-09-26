@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
@@ -12,6 +13,7 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" Component={HomePage} />
+
           <Route path="/details/:id" Component={SpecificShow} />
           <Route path="*" Component={Error} />
 
