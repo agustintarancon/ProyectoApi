@@ -10,7 +10,7 @@ const Pagination = ({pageCount, setPagination}) => {
   return (
     <>
         <ReactPaginate
-          className='pagination'
+          className='pagination d-flex flex-wrap'
           breakLinkClassName='page-link'
           pageLinkClassName='page-link'
           nextLinkClassName='page-link'
