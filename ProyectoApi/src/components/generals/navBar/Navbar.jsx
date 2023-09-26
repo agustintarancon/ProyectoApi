@@ -1,14 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className='container-fluid'>
       <ul className="nav nav-tabs">
         <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-        <li className="nav-item">
-            <a className="nav-link" href="#">Series</a>
+            <Link to="/" className="nav-link active">Home</Link>
           </li>
       </ul>
     </div>
