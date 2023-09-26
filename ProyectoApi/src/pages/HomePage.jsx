@@ -9,10 +9,13 @@ const UrlBase = "https://www.episodate.com/api/most-popular";
 
 
 const TvPrograms = () => {
+
   const [ShowsData, setShowsData] = useState([]);
   const [pagination, setPagination] = useState([]);
   const[urlApi, setUrlApi] = useState(UrlBase);
-
+  
+  console.log(ShowsData)
+  
   useEffect(() => {
     const fetchShowData = async () => {
       try {

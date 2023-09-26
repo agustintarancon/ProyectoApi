@@ -1,3 +1,5 @@
+
+=======
 import { useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -11,7 +13,7 @@ function SpecificShow() {
 
     const fetchData = async () => {
       try {
-        const  { data }  = await axios.get(`https://www.episodate.com/api/show-details?q=${id}`); // El id debe ser ingresado por useParams (react router dom)
+        const  { data }  = await axios.get(`https://www.episodate.com/api/show-details?q=${id}`);
         setShowData(data.tvShow);
       } catch (error) {
         console.error("Error en la solicitud HTTP:", error);
@@ -19,12 +21,13 @@ function SpecificShow() {
     };
     fetchData();
 
+
   },[]);
 
   return (
-    <>
+    <div className='container'>
       <Details ShowData={ShowData}/>
-    </>
+    </div>
   );
 };
 
