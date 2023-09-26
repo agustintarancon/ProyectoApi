@@ -4,18 +4,19 @@ import HomePage from "./pages/HomePage";
 import SpecificShow from "./pages/SpecificShow";
 import Error from './components/Error 404/Error';
 import Navbar from "./components/navBar/Navbar";
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar>
+        <Navbar />
         <Routes>
           <Route path="/" Component={HomePage} />
           <Route path="/details" Component={SpecificShow} />
           <Route path="*" Component={Error} />
         </Routes>
-        </Navbar>
+        <Footer />
       </BrowserRouter>
     </>
   );
